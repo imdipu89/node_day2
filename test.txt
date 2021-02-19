@@ -1,0 +1,19 @@
+i m in node// foo.js
+var myFunc = require("./myFunc");
+function foo(){
+   myFunc("message");
+}
+
+// bar.js
+var myFunc = require("./myFunc");
+function bar(){
+   myFunc("message");
+}
+
+// myFunc.js
+module.exports = myFunc;
+function myFunc(arg1){
+   console.log(arg1);
+   // Here I need the file path of the caller function
+   // For example, "/path/to/foo.js" and "/path/to/bar.js"
+} phase
